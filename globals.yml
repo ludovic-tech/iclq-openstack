@@ -1,8 +1,4 @@
 kolla_base_distro: "ubuntu"
-kolla_internal_vip_address: "10.0.0.200"
-network_interface: "enp1s0"
-neutron_external_interface: "enp7s0"
-kolla_base_distro: "ubuntu"
 # une adress IP libre dans votre stack : ex : 192.168.232.x
 kolla_internal_vip_address: "10.0.0.200"  
 # Votre inerface réseau : ens33
