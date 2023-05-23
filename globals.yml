@@ -1,0 +1,30 @@
+kolla_base_distro: "ubuntu"
+kolla_internal_vip_address: "10.0.0.200"
+network_interface: "enp1s0"
+neutron_external_interface: "enp7s0"
+23 Ludovic Quenec’hdu – PLB Consultant
+kolla_base_distro: "ubuntu"
+# une adress IP libre dans votre stack : ex : 192.168.232.x
+kolla_internal_vip_address: "10.0.0.200"  
+# Votre inerface réseau : ens33
+network_interface: "enp1s0"
+# Interface résau non configuré et activé avec la commande : ip link set ens34 up
+neutron_external_interface: "enp7s0"
+enable_ceilometer: "yes"
+enable_cinder: "yes"
+enable_cinder_backend_lvm: "yes"
+enable_cinder_backend_nfs: "yes"
+enable_designate: "yes"
+enable_gnocchi: "yes"
+enable_magnum: "yes"
+enable_neutron_vpnaas: "yes"
+enable_octavia: "yes"
+enable_skyline: "yes"
+enable_trove: "yes"
+gnocchi_backend_storage: "{% if enable_swift | bool %}swift{% else %}file{%
+endif %}"
+octavia_auto_configure: no
+octavia_certs_country: FR
+octavia_certs_state: Bretagne
+octavia_certs_organization: OpenStack
+octavia_certs_organizational_unit: Octavia
